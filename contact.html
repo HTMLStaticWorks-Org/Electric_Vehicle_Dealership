@@ -1,1 +1,293 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact | VOLTWAY</title><link rel="stylesheet" href="styles.css"></head><body><header class="header"><div class="wrap nav"><a class="brand" href="index.html"><span class="bolt">ϟ</span>VOLTWAY</a><nav class="links"><a href="index.html">Home</a><a href="home2.html">Home 2</a><a href="about.html">About</a><a href="models.html">EV Models</a><a href="charge.html">Charging</a><a href="savings.html">Savings</a><a href="locations.html">Locations</a><a href="dashboard.html">Dashboard</a></nav><div class="actions"><button class="ctrl" data-theme>Dark</button><button class="ctrl" data-dir>LTR</button><a class="btn alt" href="locations.html">Test Drive</a><a class="btn" href="dashboard.html">Dashboard</a><span class="account"><a href="login.html">Login</a> / <a href="signup.html">Sign Up</a></span><button class="ctrl menu">Menu</button></div></div><nav class="mobile"><a href="index.html">Home</a><a href="home2.html">Home 2</a><a href="about.html">About</a><a href="models.html">EV Models</a><a href="charge.html">Charging</a><a href="savings.html">Savings</a><a href="locations.html">Locations</a><a href="dashboard.html">Dashboard</a><a href="login.html">Login</a><a href="signup.html">Sign Up</a></nav></header><main><section class="section"><div class="wrap"><span class="eyebrow">Dealership support</span><h1>Meet us. See the EVs. Take a drive.</h1><p>Location information below is a placeholder until verified dealer details are provided.</p><div class="grid"><div class="panel"><span class="tag">Main enquiry point</span><h3>Vijayawada</h3><p>Address and hours to be confirmed.</p></div><div class="panel"><span class="tag">Sales & service</span><h3>Regional location</h3><p>Address and available models to be added.</p></div><div class="panel"><span class="tag">Test drive</span><h3>Appointment support</h3><p>Booking subject to confirmation.</p></div></div></div></section><section class="section"><div class="wrap"><h2>Contact & test drive</h2><div class="split"><form class="panel" data-demo data-msg="Demo enquiry validated. Connect a booking service to receive requests."><div class="field"><label>Name</label><input required></div><div class="field"><label>Email</label><input type="email" required></div><div class="field"><label>Phone</label><input required></div><div class="field"><label>Interested in</label><select><option>Electric car</option><option>Electric scooter</option><option>Commercial EV</option><option>Charging solution</option></select></div><div class="field"><label>Preferred date</label><input type="date"></div><button class="btn">Send enquiry</button></form><div class="map"><iframe title="Vijayawada map preview, not a verified dealer pin" src="https://www.openstreetmap.org/export/embed.html?bbox=80.58%2C16.48%2C80.72%2C16.58&layer=mapnik"></iframe><p>Vijayawada-area map preview only. Replace with the verified dealership location.</p></div></div></div></section></main><footer class="footer"><div class="wrap footgrid"><div><a class="brand" href="index.html">ϟ VOLTWAY</a><p>Explore electric mobility with clear vehicle information, charging guidance and ownership tools.</p></div><div><h3>Explore</h3><p><a href="models.html">EV Models</a><br><a href="charge.html">Charging</a><br><a href="savings.html">Savings</a></p></div><div><h3>Support</h3><p><a href="about.html">About</a><br><a href="locations.html">Locations</a><br><a href="dashboard.html">Dashboard</a></p></div><div><h3>EV updates</h3><form data-demo data-msg="Thanks. Connect a newsletter service to receive signups."><input type="email" placeholder="Email address" required><button class="btn">Join</button></form></div></div><div class="wrap copy">© 2026 VOLTWAY · Vehicle data and availability must be verified by the dealership.</div></footer><div class="toast"></div><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact | VOLTWAY</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrap nav">
+        <a class="brand" href="index.html" aria-label="VOLTWAY Home">
+          <img class="brand-logo" src="assets/logo.png" alt="VOLTWAY" />
+        </a>
+        <nav class="links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="home2.html">Home 2</a>
+          <a href="about.html">About</a>
+          <a href="models.html">EV Models</a>
+          <a href="charge.html">Charging</a>
+          <a href="savings.html">Savings</a>
+          <a href="locations.html">Locations</a>
+        </nav>
+        <div class="actions">
+          <button type="button" class="ctrl" data-theme>Dark</button>
+          <button type="button" class="ctrl" data-dir>LTR</button>
+          <a class="btn alt" href="login.html">Login</a>
+          <a class="btn" href="dashboard.html">Dashboard</a>
+          <button
+            type="button"
+            class="ctrl menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+          >
+            Menu
+          </button>
+        </div>
+      </div>
+      <nav class="mobile" id="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="home2.html">Home 2</a>
+        <a href="about.html">About</a>
+        <a href="models.html">EV Models</a>
+        <a href="charge.html">Charging</a>
+        <a href="savings.html">Savings</a>
+        <a href="locations.html">Locations</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="wrap">
+          <span class="eyebrow">Direct contact</span>
+          <h1>Get in touch with our EV team.</h1>
+          <p>
+            Placeholder dealership contact desks until verified showroom phone
+            numbers, email addresses, and hours are published.
+          </p>
+          <div class="grid">
+            <div class="panel">
+              <span class="tag">Sales desk</span>
+              <h3>Model &amp; pricing enquiries</h3>
+              <p>
+                Verify stock availability, trim options, and dealership quote
+                details before booking.
+              </p>
+            </div>
+            <div class="panel">
+              <span class="tag">Service bay</span>
+              <h3>Maintenance &amp; support</h3>
+              <p>
+                Schedule periodic inspections, software checks, and battery
+                diagnostics.
+              </p>
+            </div>
+            <div class="panel">
+              <span class="tag">Fleet desk</span>
+              <h3>Commercial &amp; business</h3>
+              <p>
+                Request multi-vehicle consultations, payload matching, and depot
+                charging guidance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <h2>Send us a message</h2>
+          <div class="split">
+            <form
+              class="panel"
+              data-demo
+              data-msg="Demo message validated. Connect a contact backend to receive enquiries."
+            >
+              <div class="field">
+                <label for="contact-name">Name</label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="contact-email">Email</label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="contact-topic">Enquiry topic</label>
+                <select id="contact-topic" name="topic">
+                  <option>Vehicle availability &amp; pricing</option>
+                  <option>Home charger assessment</option>
+                  <option>Service &amp; warranty question</option>
+                  <option>Commercial fleet enquiry</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="4"
+                  placeholder="Share your preferred model category or question..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Submit message</button>
+            </form>
+            <div class="panel">
+              <span class="tag">Response expectations</span>
+              <h3>What happens next</h3>
+              <p>
+                Once connected to a dealership CRM, enquiries are routed to the
+                matching sales, charging, or service coordinator.
+              </p>
+              <p>
+                For an in-person vehicle walkthrough or test drive slot, you can
+                also use the appointment scheduler on our locations page.
+              </p>
+              <a class="btn alt" href="locations.html">Go to locations &amp; test drive</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="map">
+        <div class="wrap">
+          <span class="eyebrow">Dealership map</span>
+          <h2>Find us on the map.</h2>
+          <p>
+            Vijayawada-area map preview only. Replace coordinates with the
+            verified dealership pin and street address before launch.
+          </p>
+          <div class="map map-lg">
+            <iframe
+              title="Vijayawada map preview, not a verified dealer pin"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=80.58%2C16.48%2C80.72%2C16.58&layer=mapnik"
+            ></iframe>
+            <p>
+              Visitor parking and EV charging bay directions can be added here
+              once the dealership address is finalized.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <span class="eyebrow">Quick support</span>
+          <h2>Helpful notes before reaching out.</h2>
+          <div class="steps">
+            <div class="step">
+              <h3>Walk-ins &amp; appointments</h3>
+              <p>
+                Booking ahead helps ensure your preferred vehicle category is
+                charged and ready upon arrival.
+              </p>
+            </div>
+            <div class="step">
+              <h3>Home charging questions</h3>
+              <p>
+                Let us know your parking type (covered, open, or apartment bay)
+                for tailored wallbox guidance.
+              </p>
+            </div>
+            <div class="step">
+              <h3>Corporate &amp; fleet demos</h3>
+              <p>
+                Share estimated daily route distances and payload needs for a
+                focused fleet briefing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footgrid">
+        <div>
+          <a class="brand" href="index.html" aria-label="VOLTWAY Home">
+            <img class="brand-logo" src="assets/logo.png" alt="VOLTWAY" />
+          </a>
+          <p>
+            Explore electric mobility with clear vehicle information, charging
+            guidance and ownership tools.
+          </p>
+          <div class="socials" aria-label="Social media">
+            <a href="#facebook" aria-label="Facebook" title="Facebook" data-demo="Connect your Facebook page URL.">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+              </svg>
+            </a>
+            <a href="#whatsapp" aria-label="WhatsApp" title="WhatsApp" data-demo="Connect your WhatsApp dealership link.">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.79 14.01c-.24.68-1.41 1.3-1.95 1.38-.5.07-1.13.1-1.82-.12-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.18-4.94-4.38-.14-.2-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.59-.36.79-.36h.56c.18 0 .42-.07.66.5.24.58.82 2.01.89 2.15.07.15.12.32.02.52-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.47.12.64-.07.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.34.07.12.07.7-.17 1.38z" />
+              </svg>
+            </a>
+            <a href="#instagram" aria-label="Instagram" title="Instagram" data-demo="Connect your Instagram profile URL.">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+              </svg>
+            </a>
+            <a href="#linkedin" aria-label="LinkedIn" title="LinkedIn" data-demo="Connect your LinkedIn page URL.">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+            </a>
+            <a href="#x" aria-label="X" title="X" data-demo="Connect your X profile URL.">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <p>
+            <a href="models.html">EV Models</a><br />
+            <a href="charge.html">Charging</a><br />
+            <a href="savings.html">Savings</a>
+          </p>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <p>
+            <a href="about.html">About</a><br />
+            <a href="locations.html">Locations</a><br />
+            <a href="dashboard.html">Dashboard</a>
+          </p>
+        </div>
+        <div>
+          <h3>EV updates</h3>
+          <form
+            class="foot-form"
+            data-demo
+            data-msg="Thanks. Connect a newsletter service to receive signups."
+          >
+            <input
+              type="email"
+              aria-label="Email address"
+              placeholder="Email address"
+              required
+            />
+            <button type="submit" class="btn">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="wrap copy">
+        © 2026 VOLTWAY · Vehicle data and availability must be verified by the
+        dealership.
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

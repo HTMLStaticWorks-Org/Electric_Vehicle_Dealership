@@ -1,1 +1,68 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Welcome back | VOLTWAY</title><link rel="stylesheet" href="styles.css"></head><body><main class="auth"><section class="authbox"><div style="text-align:right"><button class="ctrl" data-theme>Dark</button> <button class="ctrl" data-dir>LTR</button></div><a class="brand" href="index.html">ϟ VOLTWAY</a><h1>Welcome back</h1><p>Access your vehicle and test-drive information.</p><form data-demo data-msg="Demo authentication form validated. Connect a secure identity provider."><div class="field"><label>Email</label><input type="email" required></div><div class="field"><label>Password</label><input type="password" required minlength="8"></div><div><label><input type="checkbox"> Remember me</label>　<a href="#">Forgot password?</a></div><button class="btn" style="width:100%">Sign in</button></form><p><a href="signup.html">Create account</a></p></section></main><div class="toast"></div><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Welcome back | VOLTWAY</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="auth">
+      <section class="authbox">
+        <div class="auth-top">
+          <button type="button" class="ctrl" data-theme>Dark</button>
+          <button type="button" class="ctrl" data-dir>LTR</button>
+        </div>
+        <a class="brand" href="index.html" aria-label="VOLTWAY Home">
+          <img class="brand-logo" src="assets/logo.png" alt="VOLTWAY" />
+        </a>
+        <h1>Welcome back</h1>
+        <p>Access your vehicle and test-drive information.</p>
+        <form
+          data-demo
+          data-msg="Demo authentication form validated. Connect a secure identity provider."
+        >
+          <div class="field">
+            <label for="login-email">Email</label>
+            <input
+              id="login-email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input
+              id="login-password"
+              name="password"
+              type="password"
+              placeholder="Minimum 8 characters"
+              required
+              minlength="8"
+            />
+          </div>
+          <div class="auth-row">
+            <label><input type="checkbox" name="remember" /> Remember me</label>
+            <a
+              href="#reset"
+              data-demo="Password reset requires a connected identity provider."
+            >
+              Forgot password?
+            </a>
+          </div>
+          <button type="submit" class="btn" style="width: 100%">Sign in</button>
+        </form>
+        <p class="auth-alt"><a href="signup.html">Create account</a></p>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
