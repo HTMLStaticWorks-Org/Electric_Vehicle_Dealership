@@ -24,6 +24,7 @@
           <a href="charge.html">Charging</a>
           <a href="savings.html">Savings</a>
           <a href="locations.html">Locations</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <div class="actions">
           <button type="button" class="ctrl" data-theme>Dark</button>
@@ -48,6 +49,7 @@
         <a href="charge.html">Charging</a>
         <a href="savings.html">Savings</a>
         <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
@@ -55,8 +57,13 @@
     </header>
 
     <main>
-      <section class="section">
+      <section class="hero hero-about">
         <div class="wrap split">
+          <img
+            class="hero-img"
+            src="assets/img/about-hero.jpg"
+            alt="White SUV parked in a calm open landscape"
+          />
           <div>
             <span class="eyebrow">About VOLTWAY</span>
             <h1>Move to electric with confidence.</h1>
@@ -65,63 +72,77 @@
               information, charging guidance, ownership estimates and dealership
               support.
             </p>
-            <a class="btn" href="locations.html">Find a dealer</a>
+            <div class="hero-pills">
+              <span class="hero-pill">Clear specs</span>
+              <span class="hero-pill">Charging guidance</span>
+              <span class="hero-pill">Local support</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn" href="locations.html">Find a dealer</a>
+              <a class="btn alt" href="models.html">View lineup</a>
+            </div>
           </div>
-          <img
-            class="photo"
-            src="https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=1200&q=85"
-            alt="Electric vehicle parked cleanly outdoors"
-          />
         </div>
       </section>
 
       <section class="section">
         <div class="wrap">
           <h2>Useful information, without guesswork.</h2>
-          <div class="grid">
-            <div class="panel">
+          <div class="num-banner">
+            <div class="num-item">
+              <span class="num-big">01</span>
               <h3>Clarity</h3>
               <p>Specifications and estimates with context.</p>
             </div>
-            <div class="panel">
+            <div class="num-item">
+              <span class="num-big">02</span>
               <h3>Choice</h3>
               <p>Options for different needs and journeys.</p>
             </div>
-            <div class="panel">
+            <div class="num-item">
+              <span class="num-big">03</span>
               <h3>Support</h3>
               <p>Guidance before and after a test drive.</p>
             </div>
           </div>
         </div>
       </section>
+
       <section class="section">
         <div class="wrap">
           <span class="eyebrow">How we work</span>
           <h2>Built around transparent EV guidance.</h2>
-          <div class="steps">
-            <div class="step">
-              <span class="tag">Step 01</span>
-              <h3>Honest assessment</h3>
-              <p>
-                We start with your daily commute, parking setup, and passenger
-                or cargo requirements.
-              </p>
+          <div class="zig-rows">
+            <div class="zig-row">
+              <div>
+                <span class="tag">Step 01</span>
+                <h3>Honest assessment</h3>
+                <p>
+                  We start with your daily commute, parking setup, and passenger
+                  or cargo requirements before suggesting any trim.
+                </p>
+              </div>
+              <div class="zig-box">
+                <img class="zig-photo" src="assets/img/handshake.jpg" alt="Advisor and customer shaking hands" loading="lazy" />
+                <strong>What we review:</strong> Weekly distance, parking power
+                access, and real passenger/luggage requirements.
+              </div>
             </div>
-            <div class="step">
-              <span class="tag">Step 02</span>
-              <h3>Side-by-side clarity</h3>
-              <p>
-                Compare real-world range expectations and charging speeds
-                without inflated headline figures.
-              </p>
-            </div>
-            <div class="step">
-              <span class="tag">Step 03</span>
-              <h3>Post-delivery support</h3>
-              <p>
-                Receive guidance on home charging readiness, scheduled checks,
-                and service appointments.
-              </p>
+            <div class="zig-row">
+              <div class="zig-box">
+                <img class="zig-photo" src="assets/img/team-meeting.jpg" alt="Team discussing vehicle options around a table" loading="lazy" />
+                <strong>What stays clear:</strong> Real-world range factors,
+                connector compatibility, and local service schedules.
+              </div>
+              <div>
+                <span class="tag">Steps 02 &amp; 03</span>
+                <h3>Side-by-side clarity &amp; post-delivery support</h3>
+                <p>
+                  Compare real-world charging speeds without inflated headline
+                  figures, then stay supported with charging setup guidance and
+                  scheduled service reminders.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -131,13 +152,17 @@
         <div class="wrap">
           <span class="eyebrow">Who we serve</span>
           <h2>Mobility support for individuals and fleets.</h2>
-          <div class="grid">
-            <div class="panel">
-              <h3>First-time EV buyers</h3>
-              <p>
-                Step-by-step orientation on charging connectors, regen driving,
-                and home electricity basics.
-              </p>
+          <div class="mosaic-grid">
+            <div class="mosaic-wide">
+              <div>
+                <span class="tag">Primary focus</span>
+                <h3>First-time EV buyers</h3>
+                <p>
+                  Step-by-step orientation on charging connectors, regen
+                  driving, and home electricity basics without jargon.
+                </p>
+              </div>
+              <a class="btn" href="charge.html">Read charging basics</a>
             </div>
             <div class="panel">
               <h3>Multi-car households</h3>
@@ -158,16 +183,16 @@
       </section>
 
       <section class="section">
-        <div class="wrap cta">
-          <div>
-            <h2>Have questions before visiting?</h2>
-            <p>
-              Reach out to our team or browse vehicle categories ahead of your
-              appointment.
-            </p>
-          </div>
+        <div class="wrap cta-outline">
+          <span class="eyebrow">Showroom enquiries</span>
+          <h2>Have questions before visiting?</h2>
+          <p>
+            Reach out to our team or browse vehicle categories ahead of your
+            appointment.
+          </p>
           <div class="cta-actions">
-            <a class="btn alt" href="contact.html">Contact our team</a>
+            <a class="btn" href="contact.html">Contact our team</a>
+            <a class="btn alt" href="models.html">Explore EV models</a>
           </div>
         </div>
       </section>

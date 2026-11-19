@@ -24,6 +24,7 @@
           <a href="charge.html">Charging</a>
           <a href="savings.html">Savings</a>
           <a href="locations.html">Locations</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <div class="actions">
           <button type="button" class="ctrl" data-theme>Dark</button>
@@ -48,6 +49,7 @@
         <a href="charge.html">Charging</a>
         <a href="savings.html">Savings</a>
         <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
@@ -55,15 +57,21 @@
     </header>
 
     <main>
-      <section class="section">
-        <div class="wrap">
-          <span class="eyebrow">Direct contact</span>
-          <h1>Get in touch with our EV team.</h1>
-          <p>
-            Placeholder dealership contact desks until verified showroom phone
-            numbers, email addresses, and hours are published.
-          </p>
-          <div class="grid">
+      <section class="hero hero-contact">
+        <div class="wrap split">
+          <div>
+            <span class="eyebrow">Direct contact</span>
+            <h1>Get in touch with our EV team.</h1>
+            <p>
+              Placeholder dealership contact desks until verified showroom phone
+              numbers, email addresses, and hours are published.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#enquiry-form">Send a message</a>
+              <a class="btn alt" href="#map">Find on map</a>
+            </div>
+          </div>
+          <div class="hero-stack">
             <div class="panel">
               <span class="tag">Sales desk</span>
               <h3>Model &amp; pricing enquiries</h3>
@@ -92,7 +100,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="enquiry-form">
         <div class="wrap">
           <h2>Send us a message</h2>
           <div class="split">
@@ -142,6 +150,7 @@
               <button type="submit" class="btn">Submit message</button>
             </form>
             <div class="panel">
+              <img class="panel-photo" src="assets/img/support-team.jpg" alt="Two advisors celebrating at a desk" loading="lazy" />
               <span class="tag">Response expectations</span>
               <h3>What happens next</h3>
               <p>
@@ -183,27 +192,36 @@
         <div class="wrap">
           <span class="eyebrow">Quick support</span>
           <h2>Helpful notes before reaching out.</h2>
-          <div class="steps">
-            <div class="step">
-              <h3>Walk-ins &amp; appointments</h3>
-              <p>
-                Booking ahead helps ensure your preferred vehicle category is
-                charged and ready upon arrival.
-              </p>
+          <div class="support-grid">
+            <div class="support-card">
+              <div class="support-head">Showroom visits</div>
+              <div class="support-body">
+                <h3>Walk-ins &amp; appointments</h3>
+                <p>
+                  Booking ahead helps ensure your preferred vehicle category is
+                  charged and ready upon arrival.
+                </p>
+              </div>
             </div>
-            <div class="step">
-              <h3>Home charging questions</h3>
-              <p>
-                Let us know your parking type (covered, open, or apartment bay)
-                for tailored wallbox guidance.
-              </p>
+            <div class="support-card">
+              <div class="support-head">Site readiness</div>
+              <div class="support-body">
+                <h3>Home charging questions</h3>
+                <p>
+                  Let us know your parking type (covered, open, or apartment
+                  bay) for tailored wallbox guidance.
+                </p>
+              </div>
             </div>
-            <div class="step">
-              <h3>Corporate &amp; fleet demos</h3>
-              <p>
-                Share estimated daily route distances and payload needs for a
-                focused fleet briefing.
-              </p>
+            <div class="support-card">
+              <div class="support-head">Commercial enquiries</div>
+              <div class="support-body">
+                <h3>Corporate &amp; fleet demos</h3>
+                <p>
+                  Share estimated daily route distances and payload needs for a
+                  focused fleet briefing.
+                </p>
+              </div>
             </div>
           </div>
         </div>

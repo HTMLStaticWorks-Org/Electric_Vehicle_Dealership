@@ -24,6 +24,7 @@
           <a href="charge.html">Charging</a>
           <a href="savings.html">Savings</a>
           <a href="locations.html">Locations</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <div class="actions">
           <button type="button" class="ctrl" data-theme>Dark</button>
@@ -48,6 +49,7 @@
         <a href="charge.html">Charging</a>
         <a href="savings.html">Savings</a>
         <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
@@ -55,14 +57,20 @@
     </header>
 
     <main>
-      <section class="section">
+      <section class="hero hero-locations">
         <div class="wrap">
-          <span class="eyebrow">Dealership support</span>
-          <h1>Meet us. See the EVs. Take a drive.</h1>
-          <p>
-            Location information below is a placeholder until verified dealer
-            details are provided.
-          </p>
+          <div class="hero-center">
+            <span class="eyebrow">Dealership support</span>
+            <h1>Meet us. See the EVs. Take a drive.</h1>
+            <p>
+              Location information below is a placeholder until verified dealer
+              details are provided.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#book-drive">Book a test drive</a>
+              <a class="btn alt" href="contact.html">Contact desk</a>
+            </div>
+          </div>
           <div class="grid">
             <div class="panel">
               <span class="tag">Main enquiry point</span>
@@ -83,7 +91,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="book-drive">
         <div class="wrap">
           <h2>Contact &amp; test drive</h2>
           <div class="split">
@@ -148,8 +156,8 @@
         <div class="wrap">
           <span class="eyebrow">Appointment checklist</span>
           <h2>What to bring for your test drive.</h2>
-          <div class="steps">
-            <div class="step">
+          <div class="prep-ribbon">
+            <div class="prep-item">
               <span class="tag">01 / Licence</span>
               <h3>Valid driving licence</h3>
               <p>
@@ -157,15 +165,15 @@
                 the vehicle category you wish to test.
               </p>
             </div>
-            <div class="step">
+            <div class="prep-item">
               <span class="tag">02 / Route</span>
-              <h3>Parking &amp; daily route notes</h3>
+              <h3>Parking &amp; route notes</h3>
               <p>
                 Share your garage dimensions and typical commute speed so we can
                 suggest relevant models.
               </p>
             </div>
-            <div class="step">
+            <div class="prep-item">
               <span class="tag">03 / Questions</span>
               <h3>Home charging details</h3>
               <p>
@@ -181,27 +189,40 @@
         <div class="wrap">
           <span class="eyebrow">Showroom facilities</span>
           <h2>Available at our experience points.</h2>
-          <div class="grid">
-            <div class="panel">
-              <h3>Display lineup &amp; trims</h3>
-              <p>
-                Inspect cabin space, seating ergonomics, and finish samples in
-                person before reserving.
-              </p>
+          <div class="feature-duo">
+            <div class="feature-main feature-photo" style="--feat-img: url('assets/img/store-counter.jpg')">
+              <div>
+                <span class="eyebrow">Guided visit</span>
+                <h3>Hands-on showroom consultation</h3>
+                <p>
+                  Every regional dealership location focuses on practical,
+                  in-person EV evaluation before you reserve.
+                </p>
+              </div>
+              <a class="btn" href="#book-drive">Schedule your visit</a>
             </div>
-            <div class="panel">
-              <h3>Live charger demonstration</h3>
-              <p>
-                Walk through AC connector handling, lock-release steps, and
-                cable storage firsthand.
-              </p>
-            </div>
-            <div class="panel">
-              <h3>Service &amp; diagnostics desk</h3>
-              <p>
-                Discuss routine inspection intervals, battery health checks, and
-                roadside support coverage.
-              </p>
+            <div class="bento-stack">
+              <div class="panel">
+                <h3>Display lineup &amp; trims</h3>
+                <p>
+                  Inspect cabin space, seating ergonomics, and finish samples in
+                  person before reserving.
+                </p>
+              </div>
+              <div class="panel">
+                <h3>Live charger demonstration</h3>
+                <p>
+                  Walk through AC connector handling, lock-release steps, and
+                  cable storage firsthand.
+                </p>
+              </div>
+              <div class="panel">
+                <h3>Service &amp; diagnostics desk</h3>
+                <p>
+                  Discuss routine inspection intervals, battery health checks,
+                  and roadside support coverage.
+                </p>
+              </div>
             </div>
           </div>
         </div>

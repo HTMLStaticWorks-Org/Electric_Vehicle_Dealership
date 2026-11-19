@@ -24,6 +24,7 @@
           <a href="charge.html">Charging</a>
           <a href="savings.html">Savings</a>
           <a href="locations.html">Locations</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <div class="actions">
           <button type="button" class="ctrl" data-theme>Dark</button>
@@ -48,6 +49,7 @@
         <a href="charge.html">Charging</a>
         <a href="savings.html">Savings</a>
         <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
@@ -55,7 +57,7 @@
     </header>
 
     <main>
-      <section class="hero hero-dark">
+      <section class="hero hero-dark hero-center">
         <div class="wrap">
           <span class="eyebrow">VOLTWAY / PERFORMANCE EDITION</span>
           <h1>Engineered for the road ahead.</h1>
@@ -69,8 +71,8 @@
           </div>
           <img
             class="hero-wide-img"
-            src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1200&q=85"
-            alt="Performance electric vehicle charging"
+            src="assets/img/performance-dark.jpg"
+            alt="Sleek dark performance sedan lit against a black backdrop"
           />
         </div>
       </section>
@@ -87,8 +89,8 @@
           </div>
           <img
             class="photo"
-            src="https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=1200&q=85"
-            alt="Electric car interior and exterior silhouette"
+            src="assets/img/performance-road.jpg"
+            alt="Black performance car driving on a highway"
             loading="lazy"
           />
         </div>
@@ -101,34 +103,60 @@
             Visual concept only; final options depend on actual model
             availability.
           </p>
-          <div class="grid">
-            <button
-              type="button"
-              class="panel"
-              aria-pressed="false"
-              data-demo="Stealth graphite selected"
-            >
-              Stealth graphite
-            </button>
-            <button
-              type="button"
-              class="panel"
-              aria-pressed="false"
-              data-demo="Pearl white selected"
-            >
-              Pearl white
-            </button>
-            <button
-              type="button"
-              class="panel"
-              aria-pressed="false"
-              data-demo="Volt accent selected"
-            >
-              Volt accent
-            </button>
+          <div class="swatch-studio">
+            <div class="bento-stack">
+              <button
+                type="button"
+                class="panel swatch-btn active"
+                aria-pressed="true"
+                data-color="#2B303A"
+                data-title="Stealth graphite"
+                data-desc="Matte-toned metallic finish built for understated road presence."
+                data-demo="Stealth graphite selected"
+              >
+                <span class="swatch-dot" style="background: #2B303A"></span>
+                <span>Stealth graphite</span>
+              </button>
+              <button
+                type="button"
+                class="panel swatch-btn"
+                aria-pressed="false"
+                data-color="#F1F5F9"
+                data-title="Pearl white"
+                data-desc="High-clarity bright exterior finish with crisp body line contrast."
+                data-demo="Pearl white selected"
+              >
+                <span class="swatch-dot" style="background: #F1F5F9"></span>
+                <span>Pearl white</span>
+              </button>
+              <button
+                type="button"
+                class="panel swatch-btn"
+                aria-pressed="false"
+                data-color="#10B981"
+                data-title="Volt accent"
+                data-desc="Signature emerald highlight option for performance trims."
+                data-demo="Volt accent selected"
+              >
+                <span class="swatch-dot" style="background: #10B981"></span>
+                <span>Volt accent</span>
+              </button>
+            </div>
+            <div class="swatch-stage" data-swatch-stage>
+              <div class="swatch-orb" aria-hidden="true"></div>
+              <div>
+                <span class="tag">Finish preview</span>
+                <h3 data-swatch-title>Stealth graphite</h3>
+                <p data-swatch-desc>
+                  Matte-toned metallic finish built for understated road
+                  presence.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       <section class="section">
         <div class="wrap">
           <span class="eyebrow">Drive architecture</span>
@@ -137,24 +165,65 @@
             Select how throttle response and regenerative braking behave across
             changing city and highway conditions.
           </p>
-          <div class="grid">
-            <div class="panel">
+          <div class="mode-tabs" role="tablist" aria-label="Drive modes">
+            <button
+              type="button"
+              role="tab"
+              aria-selected="true"
+              class="mode-btn active"
+              data-mode-btn="eco"
+            >
+              Eco commute
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected="false"
+              class="mode-btn"
+              data-mode-btn="balanced"
+            >
+              Balanced drive
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected="false"
+              class="mode-btn"
+              data-mode-btn="performance"
+            >
+              Performance response
+            </button>
+          </div>
+          <div class="mode-panel active" data-mode-panel="eco">
+            <div>
               <span class="tag">Efficiency</span>
               <h3>Eco commute</h3>
               <p>
                 Smoothed power delivery and stronger energy recovery for dense
-                urban traffic.
+                urban traffic, maximizing range between charges.
               </p>
             </div>
-            <div class="panel">
+            <div class="stat">
+              <b>Max Regen</b>
+              <span>Priority energy recovery in stop-and-go streets</span>
+            </div>
+          </div>
+          <div class="mode-panel" data-mode-panel="balanced">
+            <div>
               <span class="tag">Everyday</span>
               <h3>Balanced drive</h3>
               <p>
-                Linear acceleration paired with natural coasting for mixed daily
-                routes.
+                Linear acceleration paired with natural coasting for mixed city
+                and ring-road daily routes.
               </p>
             </div>
-            <div class="panel">
+            <div class="stat">
+              <b>Smooth Mix</b>
+              <span>Natural pedal feel for everyday errands</span>
+            </div>
+          </div>
+          <div class="mode-panel" data-mode-panel="performance">
+            <div>
               <span class="tag">Dynamic</span>
               <h3>Performance response</h3>
               <p>
@@ -162,11 +231,15 @@
                 conditions allow.
               </p>
             </div>
+            <div class="stat">
+              <b>Instant Torque</b>
+              <span>Direct response for open-road merging</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="band">
+      <section class="band band-photo" style="--band-img: url('assets/img/dash-gauge.jpg')">
         <div class="wrap split">
           <div>
             <span class="eyebrow">Cabin &amp; telemetry</span>
@@ -195,16 +268,60 @@
       </section>
 
       <section class="section">
-        <div class="wrap cta">
+        <div class="wrap concierge-split">
           <div>
+            <span class="eyebrow">Private concierge</span>
             <h2>Experience Performance Edition in person.</h2>
             <p>
               Schedule a guided showroom preview and discuss verified trim
-              availability.
+              availability, charging options, and delivery timelines one-on-one.
             </p>
+            <ul class="concierge-list">
+              <li>
+                <span class="concierge-check" aria-hidden="true">✓</span>
+                <span>Dedicated vehicle &amp; finish walkthrough</span>
+              </li>
+              <li>
+                <span class="concierge-check" aria-hidden="true">✓</span>
+                <span>Drive mode &amp; regenerative braking demo</span>
+              </li>
+              <li>
+                <span class="concierge-check" aria-hidden="true">✓</span>
+                <span>Home wallbox &amp; charger compatibility review</span>
+              </li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn" href="locations.html">Book private viewing</a>
+              <a class="btn alt" href="contact.html">Ask a specialist</a>
+            </div>
           </div>
-          <div class="cta-actions">
-            <a class="btn alt" href="locations.html">Book private viewing</a>
+          <div class="concierge-card">
+            <div>
+              <span class="tag">Appointment format</span>
+              <h3>Guided showroom session</h3>
+              <p>
+                Reserve a quiet, dedicated slot with an EV specialist before
+                visiting.
+              </p>
+            </div>
+            <div class="concierge-grid">
+              <div class="concierge-cell">
+                <span>Session length</span>
+                <b>45 minutes</b>
+              </div>
+              <div class="concierge-cell">
+                <span>Consultation</span>
+                <b>1-on-1 advisor</b>
+              </div>
+              <div class="concierge-cell">
+                <span>Charging check</span>
+                <b>AC / DC overview</b>
+              </div>
+              <div class="concierge-cell">
+                <span>Enquiry hub</span>
+                <b>Vijayawada</b>
+              </div>
+            </div>
           </div>
         </div>
       </section>

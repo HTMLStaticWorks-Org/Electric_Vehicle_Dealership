@@ -24,6 +24,7 @@
           <a href="charge.html">Charging</a>
           <a href="savings.html">Savings</a>
           <a href="locations.html">Locations</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <div class="actions">
           <button type="button" class="ctrl" data-theme>Dark</button>
@@ -48,6 +49,7 @@
         <a href="charge.html">Charging</a>
         <a href="savings.html">Savings</a>
         <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
@@ -55,7 +57,7 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero hero-home">
         <div class="wrap cols">
           <div>
             <span class="eyebrow">Electric mobility, made clear</span>
@@ -87,8 +89,9 @@
             </div>
           </div>
           <img
-            src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1200&q=85"
-            alt="Electric vehicle plugged into a charging station"
+            class="hero-img"
+            src="assets/img/ev-roadside-charging.jpg"
+            alt="White electric car charging at a roadside charging post"
           />
         </div>
       </section>
@@ -100,8 +103,8 @@
           <div class="grid">
             <article class="card">
               <img
-                src="https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=1200&q=85"
-                alt="Modern electric passenger car"
+                src="assets/img/ev-sedan-hillside.jpg"
+                alt="White electric sedan parked on a hillside road"
                 loading="lazy"
               />
               <div class="pad">
@@ -113,8 +116,8 @@
             </article>
             <article class="card">
               <img
-                src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1200&q=85"
-                alt="Electric vehicle charging for daily city commuting"
+                src="assets/img/ev-motorcycle.jpg"
+                alt="Electric motorcycle parked against a dark tiled wall"
                 loading="lazy"
               />
               <div class="pad">
@@ -126,8 +129,8 @@
             </article>
             <article class="card">
               <img
-                src="https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=1200&q=85"
-                alt="Electric vehicle suited for commercial fleet use"
+                src="assets/img/commercial-truck.jpg"
+                alt="Commercial freight truck driving on an open highway"
                 loading="lazy"
               />
               <div class="pad">
@@ -154,8 +157,8 @@
           </div>
           <img
             class="photo"
-            src="https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=1200&q=85"
-            alt="Electric vehicle on the road demonstrating real-world range"
+            src="assets/img/ev-dusk-range.jpg"
+            alt="Dark electric sedan on a road at dusk"
             loading="lazy"
           />
         </div>
@@ -164,19 +167,19 @@
       <section class="section">
         <div class="wrap">
           <h2>From first look to first drive.</h2>
-          <div class="steps">
-            <div class="step">
-              <span class="tag">01 / Explore</span>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-badge">01</span>
               <h3>Compare models</h3>
               <p>Review vehicle types and specifications.</p>
             </div>
-            <div class="step">
-              <span class="tag">02 / Estimate</span>
+            <div class="timeline-item">
+              <span class="timeline-badge">02</span>
               <h3>Check ownership costs</h3>
               <p>Use your own travel and energy assumptions.</p>
             </div>
-            <div class="step">
-              <span class="tag">03 / Experience</span>
+            <div class="timeline-item">
+              <span class="timeline-badge">03</span>
               <h3>Book a test drive</h3>
               <p>Choose a dealer and request a time.</p>
             </div>
@@ -192,30 +195,36 @@
             Most everyday drivers combine overnight home charging with occasional
             destination or highway stops.
           </p>
-          <div class="grid">
-            <div class="panel">
-              <span class="tag">Home</span>
-              <h3>Overnight top-ups</h3>
-              <p>
-                Plug in after evening commutes where dedicated parking and safe
-                wiring are available.
-              </p>
+          <div class="bento">
+            <div class="bento-lead">
+              <div>
+                <span class="tag">Primary / Home</span>
+                <h3>Overnight top-ups where you park</h3>
+                <p>
+                  Plug in after evening commutes where dedicated parking and
+                  safe, checked wiring are available so every morning starts
+                  ready.
+                </p>
+              </div>
+              <a class="btn alt" href="charge.html">Read charging guide</a>
             </div>
-            <div class="panel">
-              <span class="tag">Destination</span>
-              <h3>Workplace &amp; retail AC</h3>
-              <p>
-                Add range steadily while parked at offices, malls, or public
-                parking bays.
-              </p>
-            </div>
-            <div class="panel">
-              <span class="tag">Highway</span>
-              <h3>DC fast corridors</h3>
-              <p>
-                Top up on intercity routes using compatible fast chargers and
-                live station checks.
-              </p>
+            <div class="bento-stack">
+              <div class="accent-card">
+                <span class="tag">Destination</span>
+                <h3>Workplace &amp; retail AC</h3>
+                <p>
+                  Add range steadily while parked at offices, malls, or public
+                  parking bays.
+                </p>
+              </div>
+              <div class="accent-card">
+                <span class="tag">Highway</span>
+                <h3>DC fast corridors</h3>
+                <p>
+                  Top up on intercity routes using compatible fast chargers and
+                  live station checks.
+                </p>
+              </div>
             </div>
           </div>
         </div>

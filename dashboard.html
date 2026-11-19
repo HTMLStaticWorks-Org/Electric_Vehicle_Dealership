@@ -13,18 +13,63 @@
   <body>
     <div class="dash">
       <aside class="side">
-        <a class="brand" href="index.html" aria-label="VOLTWAY Home">
-          <img class="brand-logo" src="assets/logo.png" alt="VOLTWAY" />
-        </a>
-        <nav aria-label="Dashboard navigation">
-          <a href="#hub">Vehicle Hub</a>
-          <a href="#rides">Booked Test Drives</a>
-          <a href="#orders">Order Tracking</a>
-          <a href="#battery">Battery Health</a>
-          <a href="#service">Service Appointments</a>
-          <a href="charge.html">Charging Network</a>
-          <a href="login.html">Logout</a>
-        </nav>
+        <div class="side-head">
+          <a
+            class="brand"
+            href="#hub"
+            data-dash-nav="hub"
+            aria-label="VOLTWAY Vehicle Hub"
+          >
+            <img class="brand-logo" src="assets/logo.png" alt="VOLTWAY" />
+          </a>
+          <button
+            type="button"
+            class="ctrl side-menu-btn"
+            aria-expanded="false"
+            aria-controls="dash-drawer"
+          >
+            Menu
+          </button>
+        </div>
+
+        <div class="side-drawer" id="dash-drawer">
+          <nav class="side-nav" aria-label="Dashboard navigation">
+            <button
+              type="button"
+              class="side-link active"
+              data-dash-nav="hub"
+              aria-current="page"
+            >
+              Vehicle Hub
+            </button>
+            <button type="button" class="side-link" data-dash-nav="rides">
+              Booked Test Drives
+            </button>
+            <button type="button" class="side-link" data-dash-nav="orders">
+              Order Tracking
+            </button>
+            <button type="button" class="side-link" data-dash-nav="battery">
+              Battery Health
+            </button>
+            <button type="button" class="side-link" data-dash-nav="service">
+              Service Appointments
+            </button>
+            <button type="button" class="side-link" data-dash-nav="charging">
+              Charging Planner
+            </button>
+            <button type="button" class="side-link" data-dash-nav="account">
+              Account Settings
+            </button>
+          </nav>
+
+          <div class="side-bottom">
+            <a class="side-logout" href="index.html">Logout</a>
+            <div class="side-ctrls">
+              <button type="button" class="ctrl side-ctrl" data-theme>Dark</button>
+              <button type="button" class="ctrl side-ctrl" data-dir>LTR</button>
+            </div>
+          </div>
+        </div>
       </aside>
 
       <main class="main" id="hub">
@@ -36,53 +81,679 @@
               Sample dashboard; connect customer accounts for real information.
             </p>
           </div>
-          <div>
-            <button type="button" class="ctrl" data-theme>Dark</button>
-            <button type="button" class="ctrl" data-dir>LTR</button>
-          </div>
+        <button
+            type="button"
+            class="user-chip"
+            data-dash-nav="account"
+            aria-label="Open account settings for Priya Nair"
+          >
+            <span class="user-avatar-wrap">
+              <img
+                class="user-avatar"
+                src="assets/img/user-avatar.jpg"
+                alt="Profile photo of Priya Nair"
+              />
+              <span class="user-status" aria-hidden="true"></span>
+            </span>
+            <span class="user-meta">
+              <span class="user-name">Priya Nair</span>
+              <span class="user-role">Vehicle Owner · Signed in</span>
+            </span>
+            <svg class="user-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
         </div>
 
-        <div class="grid">
-          <div class="metric">
-            <span>Vehicle status</span>
-            <b>In preparation</b>
-            <p>Sample</p>
-          </div>
-          <div class="metric" id="battery">
-            <span>Battery health</span>
-            <b>98%</b>
-            <p>Not live telemetry</p>
-          </div>
-          <div class="metric" id="service">
-            <span>Next service</span>
-            <b>4,200 km</b>
-            <p>Example reminder</p>
-          </div>
+        <!-- View 1: Vehicle Hub (3 distinct sections) -->
+        <div class="dash-view active" data-dash-view="hub">
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Overview</span>
+                <h2>Vehicle status snapshot</h2>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="metric">
+                <span>Vehicle status</span>
+                <b>In preparation</b>
+                <p>Sample milestone</p>
+              </div>
+              <div class="metric">
+                <span>Battery health</span>
+                <b>98%</b>
+                <p>Illustrative sample</p>
+              </div>
+              <div class="metric">
+                <span>Next service</span>
+                <b>4,200 km</b>
+                <p>Example reminder</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Profile</span>
+                <h2>Assigned dealership &amp; configuration</h2>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Sample Record</th>
+                    <th>Verification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Vehicle category</td>
+                    <td>Electric passenger car</td>
+                    <td>Demo placeholder</td>
+                  </tr>
+                  <tr>
+                    <td>Primary dealership hub</td>
+                    <td>Vijayawada enquiry point</td>
+                    <td>To be confirmed</td>
+                  </tr>
+                  <tr>
+                    <td>Preferred charging mode</td>
+                    <td>Home AC + Public DC</td>
+                    <td>User preference</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Shortcuts</span>
+                <h2>Quick dashboard actions</h2>
+              </div>
+            </div>
+            <div class="grid grid-2">
+              <div class="accent-card">
+                <h3>Schedule a test drive</h3>
+                <p>
+                  Submit a sample appointment request directly within your
+                  dashboard.
+                </p>
+                <button
+                  type="button"
+                  class="btn alt"
+                  data-dash-nav="rides"
+                >
+                  Open Booked Test Drives
+                </button>
+              </div>
+              <div class="accent-card">
+                <h3>Review home charging prep</h3>
+                <p>
+                  Check connector types and electrical site readiness before
+                  handover.
+                </p>
+                <button
+                  type="button"
+                  class="btn alt"
+                  data-dash-nav="charging"
+                >
+                  Open Charging Planner
+                </button>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <section class="section" id="orders">
-          <h2>Order tracking</h2>
-          <div class="steps">
-            <div class="step">
-              <h3>Chassis assigned</h3>
-              <p>Example complete</p>
+        <!-- View 2: Booked Test Drives (3 distinct sections) -->
+        <div class="dash-view" data-dash-view="rides">
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Appointments</span>
+                <h2>Current test drive requests</h2>
+              </div>
             </div>
-            <div class="step">
-              <h3>In transport</h3>
-              <p>Example active</p>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Reference</th>
+                    <th>Vehicle Category</th>
+                    <th>Hub</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TD-1042 (Sample)</td>
+                    <td>Electric passenger car</td>
+                    <td>Vijayawada</td>
+                    <td>Pending confirmation</td>
+                  </tr>
+                  <tr>
+                    <td>TD-1018 (Sample)</td>
+                    <td>Electric scooter</td>
+                    <td>Regional point</td>
+                    <td>Completed example</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="step">
-              <h3>Pre-delivery check</h3>
-              <p>Pending</p>
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="panel" id="rides">
-          <h2>Booked test drives</h2>
-          <p>No bookings connected.</p>
-          <a class="btn" href="locations.html">Request test drive</a>
-        </section>
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">New request</span>
+                <h2>Request a test drive slot</h2>
+              </div>
+            </div>
+            <form
+              data-demo
+              data-msg="Demo test-drive request validated inside dashboard. Connect a booking API."
+            >
+              <div class="calc-grid">
+                <div class="field">
+                  <label for="dash-ride-cat">Vehicle category</label>
+                  <select id="dash-ride-cat" name="category">
+                    <option>Electric car</option>
+                    <option>Electric scooter</option>
+                    <option>Commercial EV</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="dash-ride-hub">Dealership location</label>
+                  <select id="dash-ride-hub" name="hub">
+                    <option>Vijayawada</option>
+                    <option>Regional location</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="dash-ride-date">Preferred date</label>
+                  <input id="dash-ride-date" name="date" type="date" required />
+                </div>
+                <div class="field">
+                  <label for="dash-ride-slot">Time window</label>
+                  <select id="dash-ride-slot" name="slot">
+                    <option>Morning (10:00 – 12:30)</option>
+                    <option>Afternoon (14:00 – 16:30)</option>
+                    <option>Evening (17:00 – 18:30)</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn">Submit test drive request</button>
+            </form>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Checklist</span>
+                <h2>Items to bring on arrival</h2>
+              </div>
+            </div>
+            <div class="steps">
+              <div class="step">
+                <h3>Driving licence</h3>
+                <p>Original physical or verified digital licence required.</p>
+              </div>
+              <div class="step">
+                <h3>Daily route notes</h3>
+                <p>Share typical speeds and passenger count for guidance.</p>
+              </div>
+              <div class="step">
+                <h3>Parking details</h3>
+                <p>Note available power sockets for home charging advice.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- View 3: Order Tracking (3 distinct sections) -->
+        <div class="dash-view" data-dash-view="orders">
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Progress</span>
+                <h2>Order milestone tracker</h2>
+              </div>
+            </div>
+            <div class="steps">
+              <div class="step">
+                <span class="tag">Complete</span>
+                <h3>01 / Chassis assigned</h3>
+                <p>Example unit allocation recorded against reservation ID.</p>
+              </div>
+              <div class="step">
+                <span class="tag">Active</span>
+                <h3>02 / In transport</h3>
+                <p>Example dispatch moving toward regional dealership hub.</p>
+              </div>
+              <div class="step">
+                <span class="tag">Pending</span>
+                <h3>03 / Pre-delivery check</h3>
+                <p>Final battery, firmware, and exterior inspection before handover.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Documentation</span>
+                <h2>Pre-handover paperwork status</h2>
+              </div>
+            </div>
+            <div class="row-list">
+              <div class="row-item">
+                <h3>Identity &amp; address verification</h3>
+                <p>Example status: Verified at reservation stage.</p>
+              </div>
+              <div class="row-item">
+                <h3>Registration &amp; tax filing</h3>
+                <p>Example status: Scheduled prior to showroom dispatch.</p>
+              </div>
+              <div class="row-item">
+                <h3>Insurance cover selection</h3>
+                <p>Example status: Pending customer confirmation.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Delivery notice</span>
+                <h2>What happens during handover</h2>
+              </div>
+            </div>
+            <div class="hero-note" style="margin-top: 0">
+              Your advisor walks through portable charger storage, AC/DC port
+              release, mobile companion pairing, and scheduled service
+              intervals. All dates shown here are sample placeholders until
+              live CRM integration is connected.
+            </div>
+          </section>
+        </div>
+
+        <!-- View 4: Battery Health (3 distinct sections) -->
+        <div class="dash-view" data-dash-view="battery">
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Sample telemetry</span>
+                <h2>Battery pack metrics</h2>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="metric">
+                <span>State of health</span>
+                <b>98%</b>
+                <p>Not live telemetry</p>
+              </div>
+              <div class="metric">
+                <span>Pack temperature</span>
+                <b>Optimal</b>
+                <p>Sample status</p>
+              </div>
+              <div class="metric">
+                <span>Daily charge target</span>
+                <b>80% AC</b>
+                <p>Recommended habit</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Energy mix</span>
+                <h2>Illustrative charging distribution</h2>
+              </div>
+            </div>
+            <div class="bar-card" style="border: 0; padding: 0">
+              <div class="bar-row">
+                <div class="bar-label">
+                  <span>Home AC overnight charging</span>
+                  <span>74% (Example)</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 74%"></div>
+                </div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-label">
+                  <span>Public AC destination charging</span>
+                  <span>16% (Example)</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 16%"></div>
+                </div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-label">
+                  <span>Highway DC fast charging</span>
+                  <span>10% (Example)</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width: 10%; background: var(--muted)"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Care tips</span>
+                <h2>Battery longevity practices</h2>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="accent-card">
+                <h3>Prefer routine AC charging</h3>
+                <p>
+                  Reserve high-rate DC fast charging mainly for intercity highway
+                  legs.
+                </p>
+              </div>
+              <div class="accent-card">
+                <h3>Avoid deep 0% storage</h3>
+                <p>
+                  Keep charge between 20% and 80% when parked for several days.
+                </p>
+              </div>
+              <div class="accent-card">
+                <h3>Check manufacturer warranty</h3>
+                <p>
+                  Follow recommended periodic battery coolant and health checks.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- View 5: Service Appointments (3 distinct sections) -->
+        <div class="dash-view" data-dash-view="service">
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Schedule</span>
+                <h2>Upcoming maintenance reminder</h2>
+              </div>
+            </div>
+            <div class="grid grid-2">
+              <div class="metric">
+                <span>Next periodic check</span>
+                <b>4,200 km</b>
+                <p>Example odometer reminder</p>
+              </div>
+              <div class="metric">
+                <span>Primary inspection focus</span>
+                <b>Brakes &amp; Fluids</b>
+                <p>Regen pads, brake fluid &amp; software check</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Book service</span>
+                <h2>Request a workshop appointment</h2>
+              </div>
+            </div>
+            <form
+              data-demo
+              data-msg="Demo service appointment validated. Connect workshop scheduling backend."
+            >
+              <div class="calc-grid">
+                <div class="field">
+                  <label for="dash-srv-type">Service type</label>
+                  <select id="dash-srv-type" name="type">
+                    <option>Periodic inspection</option>
+                    <option>Battery &amp; thermal diagnostic</option>
+                    <option>Tyre rotation &amp; alignment</option>
+                    <option>Software update check</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="dash-srv-date">Preferred date</label>
+                  <input id="dash-srv-date" name="date" type="date" required />
+                </div>
+                <div class="field field-full">
+                  <label for="dash-srv-notes">Notes for technician</label>
+                  <input
+                    id="dash-srv-notes"
+                    name="notes"
+                    placeholder="Optional rattle, charger port, or alert details..."
+                  />
+                </div>
+              </div>
+              <button type="submit" class="btn">Request workshop slot</button>
+            </form>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">History</span>
+                <h2>Sample service log</h2>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Inspection</th>
+                    <th>Stage</th>
+                    <th>Outcome</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Pre-delivery inspection</td>
+                    <td>0 km (Sample)</td>
+                    <td>Passed sample checklist</td>
+                  </tr>
+                  <tr>
+                    <td>First courtesy checkup</td>
+                    <td>1,000 km (Sample)</td>
+                    <td>No issues noted</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <!-- View 6: Charging Planner (3 distinct sections - no external redirect) -->
+        <div class="dash-view" data-dash-view="charging">
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Compatibility</span>
+                <h2>Supported charging options</h2>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="metric">
+                <span>Home portable</span>
+                <b>3-Pin AC</b>
+                <p>Best for overnight top-ups on verified wiring</p>
+              </div>
+              <div class="metric">
+                <span>Home / office wallbox</span>
+                <b>Type-2 AC</b>
+                <p>Dedicated weatherproof unit with MCB protection</p>
+              </div>
+              <div class="metric">
+                <span>Highway fast stations</span>
+                <b>CCS2 DC</b>
+                <p>High-rate corridor charging on compatible models</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Home setup</span>
+                <h2>Parking site readiness checklist</h2>
+              </div>
+            </div>
+            <div class="row-list">
+              <div class="row-item">
+                <h3>1. Dedicated circuit &amp; proper earthing</h3>
+                <p>
+                  Confirm sanctioned electrical load and earth resistance with a
+                  licensed electrician before wallbox mounting.
+                </p>
+              </div>
+              <div class="row-item">
+                <h3>2. Cable reach &amp; weather shelter</h3>
+                <p>
+                  Verify charging port side and socket distance inside your
+                  assigned parking bay.
+                </p>
+              </div>
+              <div class="row-item">
+                <h3>3. Society / RWA permission</h3>
+                <p>
+                  Coordinate meter sub-line approvals early if residing in a
+                  multi-unit apartment complex.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Site survey</span>
+                <h2>Request home charger site check</h2>
+              </div>
+            </div>
+            <p>
+              Want an advisor to review your parking bay power setup before
+              delivery? Log a demo survey request below without leaving the
+              dashboard.
+            </p>
+            <button
+              type="button"
+              class="btn"
+              data-demo="Demo home-charger site survey requested. Connect technician scheduling."
+            >
+              Request site check (Demo)
+            </button>
+          </section>
+        </div>
+
+        <!-- View 7: Account Settings (3 distinct sections - replaces Logout redirect) -->
+        <div class="dash-view" data-dash-view="account">
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Owner profile</span>
+                <h2>Contact &amp; dealership preferences</h2>
+              </div>
+            </div>
+            <form
+              data-demo
+              data-msg="Demo profile preferences saved locally. Connect customer account API."
+            >
+              <div class="calc-grid">
+                <div class="field">
+                  <label for="acc-name">Full name</label>
+                  <input id="acc-name" name="name" value="Priya Nair" required />
+                </div>
+                <div class="field">
+                  <label for="acc-email">Email</label>
+                  <input
+                    id="acc-email"
+                    name="email"
+                    type="email"
+                    value="priya.nair@example.com"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="acc-phone">Phone</label>
+                  <input
+                    id="acc-phone"
+                    name="phone"
+                    type="tel"
+                    value="+91 98765 43210"
+                  />
+                </div>
+                <div class="field">
+                  <label for="acc-hub">Preferred hub</label>
+                  <select id="acc-hub" name="hub">
+                    <option>Vijayawada</option>
+                    <option>Regional location</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn">Save profile preferences</button>
+            </form>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Alerts</span>
+                <h2>Notification preferences</h2>
+              </div>
+            </div>
+            <div class="dash-toggle-row">
+              <div>
+                <strong>Service interval reminders</strong>
+                <p>Get notified ahead of mileage or calendar checkups.</p>
+              </div>
+              <input type="checkbox" aria-label="Service interval reminders" checked />
+            </div>
+            <div class="dash-toggle-row">
+              <div>
+                <strong>Test drive appointment updates</strong>
+                <p>Confirmations and slot changes for showroom visits.</p>
+              </div>
+              <input type="checkbox" aria-label="Test drive appointment updates" checked />
+            </div>
+            <div class="dash-toggle-row">
+              <div>
+                <strong>Charging guidance advisories</strong>
+                <p>Seasonal range and home wallbox maintenance tips.</p>
+              </div>
+              <input type="checkbox" aria-label="Charging guidance advisories" />
+            </div>
+          </section>
+
+          <section class="dash-sec">
+            <div class="dash-sec-head">
+              <div>
+                <span class="tag">Security</span>
+                <h2>Session status</h2>
+              </div>
+            </div>
+            <p>
+              Currently viewing sample owner data in demo mode. Connect an
+              identity provider for live sign-in and session termination.
+            </p>
+            <button
+              type="button"
+              class="btn alt"
+              data-demo="Demo session locked. Connect an identity provider for live sign-out."
+            >
+              End demo session
+            </button>
+          </section>
+        </div>
       </main>
     </div>
 

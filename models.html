@@ -24,6 +24,7 @@
           <a href="charge.html">Charging</a>
           <a href="savings.html">Savings</a>
           <a href="locations.html">Locations</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <div class="actions">
           <button type="button" class="ctrl" data-theme>Dark</button>
@@ -48,6 +49,7 @@
         <a href="charge.html">Charging</a>
         <a href="savings.html">Savings</a>
         <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
@@ -55,19 +57,26 @@
     </header>
 
     <main>
-      <section class="section">
+      <section class="hero hero-models">
         <div class="wrap">
-          <span class="eyebrow">Explore the lineup</span>
-          <h1>Find the EV for your kind of drive.</h1>
-          <p>
-            Model names, prices and exact specifications can be added when
-            dealership inventory is confirmed.
-          </p>
+          <div class="hero-center">
+            <span class="eyebrow">Explore the lineup</span>
+            <h1>Find the EV for your kind of drive.</h1>
+            <p>
+              Model names, prices and exact specifications can be added when
+              dealership inventory is confirmed.
+            </p>
+            <div class="hero-pills">
+              <a class="hero-pill" href="#compare">Compare categories</a>
+              <a class="hero-pill" href="savings.html">Estimate running cost</a>
+              <a class="hero-pill" href="locations.html">Book a test drive</a>
+            </div>
+          </div>
           <div class="grid">
             <article class="card">
               <img
-                src="https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=1200&q=85"
-                alt="Electric passenger car model"
+                src="assets/img/ev-showroom.jpg"
+                alt="White electric sports car on a showroom floor"
               />
               <div class="pad">
                 <span class="tag">Passenger</span>
@@ -77,8 +86,8 @@
             </article>
             <article class="card">
               <img
-                src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1200&q=85"
-                alt="Electric scooter charging for city commute"
+                src="assets/img/two-wheeler-city.jpg"
+                alt="Two-wheeler leaning against a bright wall"
               />
               <div class="pad">
                 <span class="tag">Two-wheeler</span>
@@ -88,8 +97,8 @@
             </article>
             <article class="card">
               <img
-                src="https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=1200&q=85"
-                alt="Commercial electric fleet vehicle"
+                src="assets/img/ev-coach.jpg"
+                alt="Passenger coach on a mountain road at dusk"
               />
               <div class="pad">
                 <span class="tag">Commercial</span>
@@ -101,26 +110,59 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="specs">
         <div class="wrap">
           <h2>Specifications worth checking</h2>
           <div class="grid">
             <div class="panel">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="18" height="10" rx="2" />
+                  <line x1="22" y1="11" x2="22" y2="13" />
+                  <line x1="6" y1="11" x2="6" y2="13" />
+                </svg>
+              </div>
               <h3>Battery</h3>
-              <p>Capacity, chemistry and warranty.</p>
+              <p>Verify pack fundamentals before comparing trims.</p>
+              <ul class="spec-bullets">
+                <li>Usable kWh capacity</li>
+                <li>Cell chemistry &amp; thermal cooling</li>
+                <li>Warranty years &amp; km terms</li>
+              </ul>
             </div>
             <div class="panel">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
               <h3>Range</h3>
-              <p>Certified range and real-world conditions.</p>
+              <p>Balance test-cycle claims with daily conditions.</p>
+              <ul class="spec-bullets">
+                <li>Certified test range</li>
+                <li>Highway vs city speed impact</li>
+                <li>Payload &amp; AC climate load</li>
+              </ul>
             </div>
             <div class="panel">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+              </div>
               <h3>Charging</h3>
-              <p>AC/DC support, connector and time.</p>
+              <p>Match vehicle ports to your parking setup.</p>
+              <ul class="spec-bullets">
+                <li>Onboard AC charger rating</li>
+                <li>Peak DC fast-charge support</li>
+                <li>Connector type compatibility</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section" id="compare">
         <div class="wrap">
           <span class="eyebrow">Quick comparison</span>
           <h2>Compare EV categories at a glance.</h2>
@@ -165,32 +207,49 @@
 
       <section class="section">
         <div class="wrap">
-          <span class="eyebrow">Shortlisting guide</span>
-          <h2>How to pick the right model.</h2>
-          <div class="steps">
-            <div class="step">
-              <span class="tag">01 / Distance</span>
-              <h3>Measure weekly travel</h3>
-              <p>
-                Match battery capacity to your busiest week rather than rare
-                long trips.
-              </p>
+          <div class="shortlist-box">
+            <div class="shortlist-items">
+              <span class="eyebrow">Shortlisting guide</span>
+              <h2>How to pick the right model.</h2>
+              <div class="shortlist-item">
+                <span class="shortlist-num">01</span>
+                <div>
+                  <h3>Measure weekly travel</h3>
+                  <p>
+                    Match battery capacity to your busiest week rather than rare
+                    long trips.
+                  </p>
+                </div>
+              </div>
+              <div class="shortlist-item">
+                <span class="shortlist-num">02</span>
+                <div>
+                  <h3>Confirm charging access</h3>
+                  <p>
+                    Check whether overnight home charging or nearby public
+                    stations will be primary.
+                  </p>
+                </div>
+              </div>
+              <div class="shortlist-item">
+                <span class="shortlist-num">03</span>
+                <div>
+                  <h3>Test back-to-back</h3>
+                  <p>
+                    Compare ride height, visibility, and cabin ergonomics in
+                    person at the dealership.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="step">
-              <span class="tag">02 / Parking</span>
-              <h3>Confirm charging access</h3>
+            <div class="zig-box">
+              <span class="tag">Next step</span>
+              <h3>Ready to inspect verified inventory?</h3>
               <p>
-                Check whether overnight home charging or nearby public stations
-                will be primary.
+                Book consecutive drives at our showroom to compare categories
+                side by side.
               </p>
-            </div>
-            <div class="step">
-              <span class="tag">03 / Drive</span>
-              <h3>Test back-to-back</h3>
-              <p>
-                Book consecutive drives at the dealership to compare ride height
-                and cabin ergonomics.
-              </p>
+              <a class="btn" href="locations.html">Book back-to-back drives</a>
             </div>
           </div>
         </div>

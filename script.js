@@ -6,6 +6,24 @@
   root.dir = localStorage.evDir || 'ltr';
   body.classList.toggle('rtl', root.dir === 'rtl');
 
+  // Populate hamburger drawer with exact desktop menus and button controls
+  const desktopActions = document.querySelector('.header .actions');
+  const mobileNav = document.querySelector('.mobile');
+  if (desktopActions && mobileNav && !mobileNav.querySelector('.mobile-actions')) {
+    mobileNav
+      .querySelectorAll('a[href="dashboard.html"], a[href="login.html"], a[href="signup.html"]')
+      .forEach((extra) => extra.remove());
+
+    const box = document.createElement('div');
+    box.className = 'mobile-actions';
+    Array.from(desktopActions.children).forEach((item) => {
+      if (!item.classList.contains('menu')) {
+        box.appendChild(item.cloneNode(true));
+      }
+    });
+    mobileNav.appendChild(box);
+  }
+
   function refreshControls() {
     const isDark = root.dataset.theme === 'dark';
     const isRtl = root.dir === 'rtl';
@@ -42,7 +60,7 @@
 
   // Highlight active navigation link
   const currentPage = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.links a, .mobile a').forEach((link) => {
+  document.querySelectorAll('.links a, .mobile > a').forEach((link) => {
     const target = link.getAttribute('href');
     if (target === currentPage) {
       link.classList.add('active');
@@ -52,7 +70,6 @@
 
   // Mobile navigation toggle
   const menuBtn = document.querySelector('.menu');
-  const mobileNav = document.querySelector('.mobile');
 
   if (menuBtn && mobileNav) {
     menuBtn.addEventListener('click', () => {
@@ -93,10 +110,45 @@
     toastTimer = setTimeout(() => toast.classList.remove('show'), 3500);
   }
 
+  // Password visibility toggle (Auth pages)
+  document.querySelectorAll('[data-pw-toggle]').forEach((btn) => {
+    const input = document.getElementById(btn.dataset.pwToggle);
+    if (!input) return;
+    btn.addEventListener('click', () => {
+      const reveal = input.type === 'password';
+      input.type = reveal ? 'text' : 'password';
+      btn.setAttribute('aria-pressed', String(reveal));
+      btn.setAttribute('aria-label', reveal ? 'Hide password' : 'Show password');
+    });
+  });
+
+  // Confirm password match validation (Signup page)
+  document.querySelectorAll('[data-match]').forEach((confirmInput) => {
+    const source = document.getElementById(confirmInput.dataset.match);
+    if (!source) return;
+    const syncMatch = () => {
+      if (confirmInput.value && confirmInput.value !== source.value) {
+        confirmInput.setCustomValidity('Passwords do not match.');
+      } else {
+        confirmInput.setCustomValidity('');
+      }
+    };
+    confirmInput.addEventListener('input', syncMatch);
+    source.addEventListener('input', syncMatch);
+  });
+
   // Demo forms
   document.querySelectorAll('form[data-demo]').forEach((form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+      form.querySelectorAll('[data-match]').forEach((confirmInput) => {
+        const source = document.getElementById(confirmInput.dataset.match);
+        if (source && confirmInput.value !== source.value) {
+          confirmInput.setCustomValidity('Passwords do not match.');
+        } else {
+          confirmInput.setCustomValidity('');
+        }
+      });
       if (form.reportValidity()) {
         notify(
           form.dataset.msg ||
@@ -126,9 +178,87 @@
         el.classList.add('active');
         el.setAttribute('aria-pressed', 'true');
       }
+      const stage = document.querySelector('[data-swatch-stage]');
+      if (stage && el.dataset.color) {
+        const orb = stage.querySelector('.swatch-orb');
+        const title = stage.querySelector('[data-swatch-title]');
+        const desc = stage.querySelector('[data-swatch-desc]');
+        if (orb) orb.style.background = el.dataset.color;
+        if (title) title.textContent = el.dataset.title || el.textContent.trim();
+        if (desc && el.dataset.desc) desc.textContent = el.dataset.desc;
+      }
       notify(el.dataset.demo || 'Demo action triggered.');
     });
   });
+
+  // Drive mode tabs (Home 2)
+  document.querySelectorAll('[data-mode-btn]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.modeBtn;
+      document.querySelectorAll('[data-mode-btn]').forEach((b) => {
+        const active = b === btn;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+      document.querySelectorAll('[data-mode-panel]').forEach((panel) => {
+        panel.classList.toggle('active', panel.dataset.modePanel === target);
+      });
+    });
+  });
+
+  // Dashboard in-page menu switching (no external redirects)
+  const dashViews = document.querySelectorAll('[data-dash-view]');
+  if (dashViews.length) {
+    const dashNavBtns = document.querySelectorAll('[data-dash-nav]');
+    const sideMenuBtn = document.querySelector('.side-menu-btn');
+    const sideDrawer = document.querySelector('.side-drawer');
+
+    const closeDashDrawer = () => {
+      if (sideDrawer && sideMenuBtn) {
+        sideDrawer.classList.remove('open');
+        sideMenuBtn.setAttribute('aria-expanded', 'false');
+      }
+    };
+
+    if (sideMenuBtn && sideDrawer) {
+      sideMenuBtn.addEventListener('click', () => {
+        const open = sideDrawer.classList.toggle('open');
+        sideMenuBtn.setAttribute('aria-expanded', String(open));
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && sideDrawer.classList.contains('open')) {
+          closeDashDrawer();
+        }
+      });
+    }
+
+    const activateView = (viewName) => {
+      dashViews.forEach((view) => {
+        view.classList.toggle('active', view.dataset.dashView === viewName);
+      });
+      document.querySelectorAll('.side-link[data-dash-nav]').forEach((btn) => {
+        const isActive = btn.dataset.dashNav === viewName;
+        btn.classList.toggle('active', isActive);
+        if (isActive) {
+          btn.setAttribute('aria-current', 'page');
+        } else {
+          btn.removeAttribute('aria-current');
+        }
+      });
+      closeDashDrawer();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    dashNavBtns.forEach((trigger) => {
+      trigger.addEventListener('click', (event) => {
+        if (trigger.tagName === 'A') {
+          event.preventDefault();
+        }
+        activateView(trigger.dataset.dashNav);
+      });
+    });
+  }
 
   // Savings calculator
   document.querySelectorAll('[data-calc]').forEach((form) => {

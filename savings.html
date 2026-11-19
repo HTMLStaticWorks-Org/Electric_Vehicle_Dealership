@@ -24,6 +24,7 @@
           <a href="charge.html">Charging</a>
           <a href="savings.html">Savings</a>
           <a href="locations.html">Locations</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <div class="actions">
           <button type="button" class="ctrl" data-theme>Dark</button>
@@ -48,6 +49,7 @@
         <a href="charge.html">Charging</a>
         <a href="savings.html">Savings</a>
         <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="login.html">Login</a>
         <a href="signup.html">Sign Up</a>
@@ -55,16 +57,28 @@
     </header>
 
     <main>
-      <section class="section">
-        <div class="wrap">
-          <span class="eyebrow">Ownership calculator</span>
-          <h1>Estimate your running-cost difference.</h1>
-          <p>
-            Illustrative energy-cost comparison only, not a quote or guaranteed
-            saving.
-          </p>
-          <div class="split">
-            <form class="panel" data-calc>
+      <section class="hero hero-savings">
+        <div class="wrap split">
+          <div>
+            <span class="eyebrow">Ownership calculator</span>
+            <h1>Estimate your running-cost difference.</h1>
+            <p>
+              Illustrative energy-cost comparison only, not a quote or
+              guaranteed saving.
+            </p>
+            <div class="hero-note">
+              <strong>Use your own assumptions:</strong> Excludes purchase
+              price, financing, insurance, maintenance, charger installation,
+              taxes and tariff changes. Compare full ownership costs before
+              buying.
+            </div>
+            <div class="hero-actions">
+              <a class="btn" href="models.html">Compare EV models</a>
+              <a class="btn alt" href="charge.html">Charging guide</a>
+            </div>
+          </div>
+          <form class="panel" data-calc>
+            <div class="calc-grid">
               <div class="field">
                 <label for="calc-km">Daily distance (km)</label>
                 <input id="calc-km" name="km" type="number" value="35" min="1" />
@@ -90,7 +104,7 @@
                 />
               </div>
               <div class="field">
-                <label for="calc-electricity">EV electricity cost (₹/kWh)</label>
+                <label for="calc-electricity">EV electricity (₹/kWh)</label>
                 <input
                   id="calc-electricity"
                   name="electricity"
@@ -99,7 +113,7 @@
                   min="1"
                 />
               </div>
-              <div class="field">
+              <div class="field field-full">
                 <label for="calc-efficiency">EV consumption (kWh/100 km)</label>
                 <input
                   id="calc-efficiency"
@@ -109,49 +123,78 @@
                   min="1"
                 />
               </div>
-              <div class="result">
+            </div>
+            <div class="result">
+              <div>
                 <span>Monthly difference</span>
                 <strong data-out>₹0</strong>
-                <p>Illustrative 5-year difference: <b data-five>₹0</b></p>
               </div>
-            </form>
-            <div>
-              <h2>Use your own assumptions.</h2>
-              <p>
-                Excludes purchase price, financing, insurance, maintenance,
-                charger installation, taxes and tariff changes. Compare full
-                ownership costs before buying.
-              </p>
+              <p>Illustrative 5-year difference: <b data-five>₹0</b></p>
             </div>
-          </div>
+          </form>
         </div>
       </section>
       <section class="section">
-        <div class="wrap">
-          <span class="eyebrow">Full cost picture</span>
-          <h2>What else shapes EV ownership cost?</h2>
-          <div class="grid">
-            <div class="panel">
-              <h3>Routine maintenance</h3>
-              <p>
-                Fewer moving drivetrain parts and regenerative braking wear
-                reduction can alter service intervals—verify the service
-                schedule per model.
-              </p>
+        <div class="wrap split">
+          <div class="bar-card">
+            <img class="card-photo" src="assets/img/solar-energy.jpg" alt="Solar panels under a clear blue sky" loading="lazy" />
+            <span class="eyebrow">Illustrative mix</span>
+            <h3>Relative energy cost drivers</h3>
+            <div class="bar-row">
+              <div class="bar-label">
+                <span>Petrol commuting</span>
+                <span>Fuel price sensitive</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 90%; background: var(--muted)"></div>
+              </div>
             </div>
-            <div class="panel">
-              <h3>Charging tariff mix</h3>
-              <p>
-                Home off-peak electricity typically differs from public DC fast
-                charging rates; blend both in your monthly estimate.
-              </p>
+            <div class="bar-row">
+              <div class="bar-label">
+                <span>Public DC fast mix</span>
+                <span>Moderate tariff</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 48%"></div>
+              </div>
             </div>
-            <div class="panel">
-              <h3>Registration &amp; policies</h3>
-              <p>
-                State road tax rules, registration fees, and incentive schemes
-                change periodically—confirm current eligibility before booking.
-              </p>
+            <div class="bar-row">
+              <div class="bar-label">
+                <span>Home AC overnight</span>
+                <span>Lowest domestic tariff</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 24%"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Full cost picture</span>
+            <h2>What else shapes EV ownership cost?</h2>
+            <div class="row-list">
+              <div class="row-item">
+                <h3>Routine maintenance</h3>
+                <p>
+                  Fewer moving drivetrain parts and regenerative braking wear
+                  reduction can alter service intervals—verify the service
+                  schedule per model.
+                </p>
+              </div>
+              <div class="row-item">
+                <h3>Charging tariff mix</h3>
+                <p>
+                  Home off-peak electricity typically differs from public DC
+                  fast charging rates; blend both in your monthly estimate.
+                </p>
+              </div>
+              <div class="row-item">
+                <h3>Registration &amp; policies</h3>
+                <p>
+                  State road tax rules, registration fees, and incentive schemes
+                  change periodically—confirm current eligibility before
+                  booking.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -159,27 +202,32 @@
 
       <section class="section">
         <div class="wrap">
-          <span class="eyebrow">Usage profiles</span>
-          <h2>How daily distance shifts energy spend.</h2>
-          <div class="steps">
-            <div class="step">
-              <span class="tag">~15 km / day</span>
+          <div class="hero-center">
+            <span class="eyebrow">Usage profiles</span>
+            <h2>How daily distance shifts energy spend.</h2>
+          </div>
+          <div class="tier-grid">
+            <div class="tier-card">
+              <span class="tag">Light use</span>
+              <div class="tier-metric">~15 km / day</div>
               <h3>Light city commuter</h3>
               <p>
                 Short neighborhood errands where an electric scooter or compact
                 urban EV needs charging only once or twice a week.
               </p>
             </div>
-            <div class="step">
-              <span class="tag">~40 km / day</span>
+            <div class="tier-card tier-featured">
+              <span class="tag">Most common</span>
+              <div class="tier-metric">~40 km / day</div>
               <h3>Regular daily driver</h3>
               <p>
                 Weekday office commutes where lower per-kilometre energy cost
                 compounds noticeably over multi-year ownership.
               </p>
             </div>
-            <div class="step">
-              <span class="tag">~90+ km / day</span>
+            <div class="tier-card">
+              <span class="tag">Heavy duty</span>
+              <div class="tier-metric">~90+ km / day</div>
               <h3>High-mileage &amp; fleet</h3>
               <p>
                 Heavy daily utilization where depot planning, warranty mileage
@@ -191,15 +239,17 @@
       </section>
 
       <section class="section">
-        <div class="wrap cta">
+        <div class="wrap cta-split">
           <div>
+            <span class="eyebrow">Next step</span>
             <h2>Ready to pair numbers with a real drive?</h2>
             <p>
               Compare vehicle categories or schedule a showroom consultation.
             </p>
           </div>
           <div class="cta-actions">
-            <a class="btn alt" href="models.html">Explore EV models</a>
+            <a class="btn" href="models.html">Explore EV models</a>
+            <a class="btn alt" href="locations.html">Book test drive</a>
           </div>
         </div>
       </section>
