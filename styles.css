@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
+  color-scheme: light;
   --p: #0F172A;
   --s: #10B981;
   --s-txt: #047857;
@@ -12,6 +13,7 @@
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
   --bg: #080C14;
   --card: #111827;
   --txt: #F1F5F9;
@@ -1415,6 +1417,34 @@ button.panel.active {
   color: var(--txt);
 }
 
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+.field input[type="date"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"] .field input[type="date"] {
+  color-scheme: dark;
+}
+
+.field input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.15s ease;
+}
+
+[data-theme="dark"] .field input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+}
+
+.field input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
 .result {
   background: var(--bg);
   border: 1px solid var(--line);
@@ -1437,6 +1467,7 @@ button.panel.active {
   border-radius: 16px;
   display: block;
   margin-bottom: 10px;
+  color-scheme: light;
 }
 
 .map-lg iframe {
@@ -2460,4 +2491,83 @@ button.panel.active {
   .user-meta {
     flex: 1;
   }
+}
+
+/* Contact enquiry panel & social links */
+.contact-split {
+  align-items: stretch;
+}
+
+.contact-split > form.panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-split > form.panel .field:first-child {
+  margin-top: 0;
+}
+
+.contact-split > form.panel .field-grow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-split > form.panel .field-grow textarea {
+  flex: 1;
+  min-height: 112px;
+  resize: vertical;
+}
+
+.contact-split > form.panel .btn[type="submit"] {
+  align-self: flex-start;
+}
+
+.contact-expect {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-expect .panel-photo {
+  height: 165px;
+  margin-bottom: 14px;
+}
+
+.contact-expect > .btn {
+  align-self: flex-start;
+  margin-bottom: 18px;
+}
+
+.contact-socials {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.contact-socials-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.contact-socials .socials {
+  margin-top: 0;
+}
+
+.contact-socials .socials a {
+  background: rgba(16, 185, 129, 0.14);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--s-txt);
+}
+
+.contact-socials .socials a:hover {
+  background: var(--s);
+  border-color: var(--s);
+  color: #052E22;
+  transform: translateY(-2px);
 }
